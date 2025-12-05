@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { withSentryConfig } from "@sentry/nextjs";
 import { codeInspectorPlugin } from "code-inspector-plugin";
 
 const nextConfig: NextConfig = {
@@ -11,8 +10,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
-  org: "example-org",
-  project: "example-project",
-  silent: true,
-});
+export default nextConfig;
